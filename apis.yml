@@ -1,23 +1,72 @@
 aid: aragen-life-sciences
+
 name: Aragen Life Sciences
-description: 'Aragen Life Sciences is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.aragen.com/wp-content/uploads/2021/07/PR-OG-Image.jpg
+
+description: 'Aragen Life Sciences provides contract research, development, and manufacturing services (CRDMO) for small and large molecule drug discovery and development. The company offers integrated solutions across chemistry, biology, analytical development, and GMP manufacturing, supporting clients from early discovery through commercial production. Their platform includes scientific expertise, global locations, and a resource hub for investors and partners.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aragen-life-sciences/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- ContractResearch
+- DrugDiscovery
+- Manufacturing
+- Biotechnology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/aragen-life-sciences-llms.txt
+- type: Hosts
+  url: hosts/aragen-life-sciences-hosts.yml
+- type: TermsOfService
+  url: https://www.aragen.com/utlities/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.aragen.com/utlities/privacy-policy/
+- type: Newsroom
+  url: https://www.aragen.com/news/project-ascent-goes-live/
+- type: Leadership
+  url: https://www.aragen.com/our-company/leadership/
+- type: DomainSecurity
+  url: security/aragen-life-sciences-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.aragen.com
+
+apis: []
+
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  detail: "Sitemap and API host requests were blocked by anti-bot measures."
+  evidence:
+    - url: https://www.aragen.com/sitemap.xml
+      status: 406
+    - url: https://api.aragen.com/openapi.json
+      status: 000
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
